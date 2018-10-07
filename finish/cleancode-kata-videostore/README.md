@@ -125,3 +125,25 @@ Activity
 - change return value to `String.format` call
 - inline variable for createRentalLine method return value
 
+Activity
+
+- Remove demeter law violation for `rental.getMovie().getTitle()`
+- In method formatRentalLines
+- Making method call like `rental.getTitle()`
+- Rearrange methods of Statement class for step down method
+
+Observe
+
+- determineAmount method is not cohesive
+- it does not uses any fields in statement class
+- it does not belong to Statement class
+- in fact it should belong to Rental class as it uses methods from that class
+- same true with method determineFrequentRenterPoints
+
+Activity 
+
+- Move the method determineAmount to Rental class as public
+- change calls to getMovie() and getDaysRented() to field variables
+- Move determineFrequentRenterPoints method to Rental class
+- change calls to getMovie() and getDaysRented() to field variables
+
