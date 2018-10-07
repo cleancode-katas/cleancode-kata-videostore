@@ -96,3 +96,13 @@ Activity
 - rename initialize method to clearTotals
 - change return value in createFooter to `String.format`
 - check test failures and correct format of float
+
+Activity
+
+- Change the order of methods in order of calls
+- Step down method of ordering methods
+- remove unused getCustomerName method
+- Extract body of for loop from method createRentalLines to method named createRentalLine
+- rename variable rentalLinesText to rentalLineText in method createRentalLine
+
+
