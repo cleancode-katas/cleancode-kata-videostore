@@ -12,6 +12,10 @@ import static org.junit.Assert.*;
 
 public class VideoStoreTest {
 
+    private static final double DELTA = .001;
+
+    private Customer customer;
+
     @Before
     public void setUp() {
         customer = new Customer("Fred");
@@ -26,6 +30,8 @@ public class VideoStoreTest {
                         "You owed 9.0\n" +
                         "You earned 2 frequent renter points\n",
                 customer.statement());
+        assertEquals(9.0, customer.getTotal(), DELTA);
+        assertEquals(2, customer.getFrequentRenterPoints());
     }
 
     @Test
@@ -67,6 +73,4 @@ public class VideoStoreTest {
                         "You earned 3 frequent renter points\n",
                 customer.statement());
     }
-
-    private Customer customer;
 }
