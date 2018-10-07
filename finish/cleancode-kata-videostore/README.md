@@ -14,7 +14,7 @@ Observe
 Activity
 
 - Break the strings in the test methods into multiple parts
-- Makes methods visible all in one screen 
+- Makes methods visible all in one screen
 - No scrolling to right needed
 
 Observe
@@ -156,13 +156,12 @@ Observe
 Activity
 
 - Add signatures of method like follows
-    ```java 
+    ```java
     public double determineAmount() {
         return determineAmount(daysRented);
     }
 
     public double determineAmount(int daysRented) {
-    
     ```
 - Move the method with argument to Movie class
 - Fix the rental this issue 
@@ -188,4 +187,3 @@ Activity
 - Run with coverage and remove unused code from all subclasses
 - Remove the type codes of Movies now as they are redundant
 - Change signature of constructor of Movie and remove priceCode
-
