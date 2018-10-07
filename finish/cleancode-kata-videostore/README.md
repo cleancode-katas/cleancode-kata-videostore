@@ -106,3 +106,12 @@ Activity
 - rename variable rentalLinesText to rentalLineText in method createRentalLine
 
 
+Activity
+
+- extract the switch statement into method using comment content for name
+- do not pass thisAmount variable
+- Rename variable thisAmount to rentalAmount in method determineAmount and createRentalLine
+- Extract frequentRenterPoints login into method determineFrequentRenterPoints
+- Modify method to make it simpler and return value without side effect
+
+
