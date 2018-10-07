@@ -114,4 +114,14 @@ Activity
 - Extract frequentRenterPoints login into method determineFrequentRenterPoints
 - Modify method to make it simpler and return value without side effect
 
+Activity
+
+- extract condition in determineFrequentRenterPoints method
+- into a variable
+- name it bonusIsEarned
+- rearrange all calculations at top in createRentalLine
+- extract formatting of rental lines into method formatRentalLines
+- remove variable declaration
+- change return value to `String.format` call
+- inline variable for createRentalLine method return value
 

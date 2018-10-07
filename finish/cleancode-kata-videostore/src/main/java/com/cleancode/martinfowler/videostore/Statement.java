@@ -52,20 +52,21 @@ public class Statement {
     }
 
     private String createRentalLine(Rental rental) {
-        String rentalLineText = "";
         double rentalAmount = determineAmount(rental);
-
         frequentRenterPoints += determineFrequentRenterPoints(rental);
-
-        rentalLineText += "\t" + rental.getMovie().getTitle() + "\t"
-                + String.valueOf(rentalAmount) + "\n";
         totalAmount += rentalAmount;
-        return rentalLineText;
+
+        return formatRentalLine(rental, rentalAmount);
+    }
+
+    private String formatRentalLine(Rental rental, double rentalAmount) {
+        return String.format("\t%s\t%.1f\n", rental.getMovie().getTitle(), rentalAmount);
     }
 
     private int determineFrequentRenterPoints(Rental rental) {
-        if (rental.getMovie().getPriceCode() == Movie.NEW_RELEASE
-                && rental.getDaysRented() > 1)
+        boolean bonusIsEarned = rental.getMovie().getPriceCode() == Movie.NEW_RELEASE
+                && rental.getDaysRented() > 1;
+        if (bonusIsEarned)
             return 2;
 
         return 1;
