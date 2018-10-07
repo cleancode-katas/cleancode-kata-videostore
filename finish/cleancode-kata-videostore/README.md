@@ -168,3 +168,24 @@ Activity
 - Fix the rental this issue 
 - Same Move with determineFrequentRenterPoints method to Movie
 
+Activity
+
+- Inline priceCode in both methods
+
+Observe
+
+- determineAmount in Movie is using switch
+- it should use polymorphic dispatch
+- we have to do this without breaking code
+
+Activity
+
+- In Test class
+- Change the Movie class names to sub classes to create them with IDE
+- remove the second parameter from constructors as it is redundant now
+- In Movie class for determineAmount method
+- use refactoring Push Members Down, keep in Movie as abstract
+- Run with coverage and remove unused code from all subclasses
+- Remove the type codes of Movies now as they are redundant
+- Change signature of constructor of Movie and remove priceCode
+
