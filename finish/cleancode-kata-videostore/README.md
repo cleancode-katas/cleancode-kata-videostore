@@ -36,3 +36,24 @@ Activity
 - promote variables totalAmount and frequentRenterPoints to fields, keep init in current method
 
 
+Activity
+
+- Remove the string comparison in first test
+- Just execute `customer.statement();` statement to generate them
+
+Observe
+
+- Customer class is just generating a statement
+- It has nothing to do with a customer other than
+- maintaining a variable of Customer customerName
+
+Activity
+
+- Rename Customer class to Statement
+- Rename customerName in Statement class to customerName
+- Rename statement method to generate
+- Change all test methods to assert calculated values
+- Duplicate last test to maintain one of them as testing string
+- Add suffix format to the last method
+- Add suffic Totals to all other test methods
+- Keep the string comparison as is in last method
