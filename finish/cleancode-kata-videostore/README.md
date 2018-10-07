@@ -87,3 +87,12 @@ Observe
 - just adds rental lines to the statement
 - extract for loop in method named createRentalLines
 - remove the params and eliminate side effects
+
+Activity
+
+- rename statementText to rentalLinesText in createRentalLines method
+- combine footer test strings and format to multiple lines
+- extract footer logic to createFooter
+- rename initialize method to clearTotals
+- change return value in createFooter to `String.format`
+- check test failures and correct format of float
