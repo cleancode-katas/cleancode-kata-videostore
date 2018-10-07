@@ -23,31 +23,11 @@ public class Rental {
     }
 
     public double determineAmount() {
-        double rentalAmount = 0;
-        switch (movie.getPriceCode()) {
-            case Movie.REGULAR:
-                rentalAmount += 2;
-                if (getDaysRented() > 2)
-                    rentalAmount += (daysRented - 2) * 1.5;
-                break;
-            case Movie.NEW_RELEASE:
-                rentalAmount += daysRented * 3;
-                break;
-            case Movie.CHILDRENS:
-                rentalAmount += 1.5;
-                if (getDaysRented() > 3)
-                    rentalAmount += (daysRented - 3) * 1.5;
-                break;
-        }
-        return rentalAmount;
+        return movie.determineAmount(daysRented);
     }
 
     public int determineFrequentRenterPoints() {
-        boolean bonusIsEarned = movie.getPriceCode() == Movie.NEW_RELEASE
-                && daysRented > 1;
-        if (bonusIsEarned)
-            return 2;
-
-        return 1;
+        return movie.determineFrequentRenterPoints(daysRented);
     }
+
 }

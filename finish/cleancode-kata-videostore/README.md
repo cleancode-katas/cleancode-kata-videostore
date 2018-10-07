@@ -105,7 +105,6 @@ Activity
 - Extract body of for loop from method createRentalLines to method named createRentalLine
 - rename variable rentalLinesText to rentalLineText in method createRentalLine
 
-
 Activity
 
 - extract the switch statement into method using comment content for name
@@ -146,4 +145,26 @@ Activity
 - change calls to getMovie() and getDaysRented() to field variables
 - Move determineFrequentRenterPoints method to Rental class
 - change calls to getMovie() and getDaysRented() to field variables
+
+Observe
+
+- In Rental class determineAmount
+- We use four things from movie and only one thing fro Rental
+- this method hence belongs to Movie class
+- same with method determineFrequentRenterPoints
+
+Activity
+
+- Add signatures of method like follows
+    ```java 
+    public double determineAmount() {
+        return determineAmount(daysRented);
+    }
+
+    public double determineAmount(int daysRented) {
+    
+    ```
+- Move the method with argument to Movie class
+- Fix the rental this issue 
+- Same Move with determineFrequentRenterPoints method to Movie
 
