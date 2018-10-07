@@ -23,10 +23,20 @@ public class Statement {
     }
 
     public String generate() {
-        totalAmount = 0;
-        frequentRenterPoints = 0;
-        String result = "Rental Record for " + getCustomerName() + "\n";
+        initialize();
+        String statementText = createHeader();
 
+        statementText += createRentalLines();
+
+        statementText += "You owed " + String.valueOf(totalAmount) + "\n";
+        statementText += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points\n";
+
+
+        return statementText;
+    }
+
+    private String createRentalLines() {
+        String statementText = "";
         for (Rental rental : rentals) {
             double thisAmount = 0;
 
@@ -53,17 +63,21 @@ public class Statement {
                     && rental.getDaysRented() > 1)
                 frequentRenterPoints++;
 
-            result += "\t" + rental.getMovie().getTitle() + "\t"
+            statementText += "\t" + rental.getMovie().getTitle() + "\t"
                     + String.valueOf(thisAmount) + "\n";
             totalAmount += thisAmount;
 
         }
+        return statementText;
+    }
 
-        result += "You owed " + String.valueOf(totalAmount) + "\n";
-        result += "You earned " + String.valueOf(frequentRenterPoints) + " frequent renter points\n";
+    private String createHeader() {
+        return String.format("Rental Record for %s\n", customerName);
+    }
 
-
-        return result;
+    private void initialize() {
+        totalAmount = 0;
+        frequentRenterPoints = 0;
     }
 
     public double getTotal() {

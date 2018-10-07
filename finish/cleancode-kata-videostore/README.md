@@ -68,3 +68,22 @@ Activity
 - change title of `The Tiger Movie` to `New Release 2`
 - change all movies to variables and titles to generic titles
 - change the format method to reflect the changes
+
+Activity
+
+- generate method of the Statement class
+- extract the statements which initialize to method 
+    ```java
+    totalAmount = 0;
+    frequentRenterPoints = 0;
+    ```
+- Rename result variable to statementText
+- extract method for createHeader
+- Change return value of createHeader to `String.format`
+
+Observe
+
+- for loop in the generate method
+- just adds rental lines to the statement
+- extract for loop in method named createRentalLines
+- remove the params and eliminate side effects
