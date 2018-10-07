@@ -55,5 +55,16 @@ Activity
 - Change all test methods to assert calculated values
 - Duplicate last test to maintain one of them as testing string
 - Add suffix format to the last method
-- Add suffic Totals to all other test methods
+- Add suffix Totals to all other test methods
 - Keep the string comparison as is in last method
+
+Activity 
+
+- Change Fred to Customer in customer name
+- Change the format method to reflect this change
+- extract field for `new Movie("The Cell", Movie.NEW_RELEASE)` with name newReleaseMovie1
+- extract `new Movie("The Tigger Movie", Movie.NEW_RELEASE)` into field newReleaseMovie2
+- change title of `The Cell` to `New Release 1`
+- change title of `The Tiger Movie` to `New Release 2`
+- change all movies to variables and titles to generic titles
+- change the format method to reflect the changes
